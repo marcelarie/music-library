@@ -1,3 +1,3 @@
-import {getRihanna} from './api.js'
+import {getRihanna, print} from './api.js'
 
-getRihanna()
+print()
