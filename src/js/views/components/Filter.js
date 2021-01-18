@@ -18,8 +18,17 @@ const filter = () => {
         <label for="limit">
             <input type="checkbox" name="limit" id="limitModalCheckBox">
             Limit
-            <input type="range" min="1" max="200" step="25" name="limit" id="limitModal">
-            </input>
+            <select id="limitModal">
+              <option value="1">1</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="75">75</option>
+              <option value="100">100</option>
+              <option value="125">125</option>
+              <option value="150">150</option>
+              <option value="175">175</option>
+              <option value="200">200</option>
+            </select>
         </label>
     </section>
 </section> `;

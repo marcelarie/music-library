@@ -7,4 +7,26 @@ const createFragmentList = (data, component) => {
     return fragment;
 };
 
-export {createFragmentList}
+const createUrl = (list) => {
+    list.forEach(input => {
+        // TODO: CREATE URL WITH ALL THE OUTPUT
+        switch (input) {
+            case '':
+                break;
+            case '':
+                break;
+            case '':
+                break;
+            case '':
+                break;
+            case '':
+                break;
+            case '':
+                break;
+            case '':
+                break;
+        }
+    })
+};
+
+export {createFragmentList, createUrl}
