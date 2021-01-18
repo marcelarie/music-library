@@ -1,3 +1,3 @@
-import {getRihanna, print} from './api.js'
+import { mainPage } from './stores/stores.js';
 
-print()
+mainPage();
