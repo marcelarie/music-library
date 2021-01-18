@@ -6,6 +6,13 @@ function get(value, option, limit = '') {
     }
     return $.ajax(setting)
 }
+function getCountry() {
+    const setting = {
+        url: `https://www.liferay.com/api/jsonws/country/get-countries/`,
+        type: 'GET',
+    }
+    return $.ajax(setting)
+}
 
 function print(data) {
     const root = $('#root')
@@ -20,4 +27,4 @@ function print(data) {
 
 
 
-export {get, print}
+export {get, print, getCountry}
