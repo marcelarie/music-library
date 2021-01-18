@@ -1,6 +1,6 @@
-function getRihanna() {
+function get(value, option, limit = '') {
     const setting = {
-        url: 'https://itunes.apple.com/search?term=jack+johnson&entity=musicVideo',
+        url: `https://itunes.apple.com/search?term=${value}&entity=${option}${limit}`,
         type: 'GET',
         dataType: 'jsonp'
     }
@@ -9,7 +9,7 @@ function getRihanna() {
 
 function print(data) {
     const root = $('#root')
-    getRihanna().done(results => results.results.forEach(i => {
+    get().done(results => results.results.forEach(i => {
         console.log(i.previewUrl)
         const video = $('<video controls></video>')
         video.css('backgroundColor', 'red')
@@ -20,4 +20,4 @@ function print(data) {
 
 
 
-export {getRihanna, print}
+export {get, print}

@@ -1,0 +1,18 @@
+
+.music-card-item {
+    all: unset;
+    border: 2px solid black;
+    display: flex;
+}
+
+.music-card-item section {
+    width: 6.5rem;
+}
+
+.music-card-item h2 {
+    font-size: 1.5em;
+}
+
+.music-card-item h3 {
+    font-size: 1em;
+}

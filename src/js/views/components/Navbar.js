@@ -1,5 +1,5 @@
 const navbar = () => {
-  const template = `
+    const template = `
   <header class="header">
     <nav>
       <h1>Music Library</h1>
@@ -8,24 +8,28 @@ const navbar = () => {
   </header>
   <section class="options">
         <section class="options__item">
-            <input type="checkbox" name="song">
-            <label for="song">Song</label>
+            <label for="checkBoxSong"> 
+                <input id="checkBoxSong" type="radio" name="checkbox-search" value="song" checked> 
+            Song</label>
         </section>
         <section class="options__item">
-            <input type="checkbox" name="artist">
-            <label for="artist">Artist</label>
+            <label for="checkBoxArtist">
+                <input id="checkBoxArtist" type="radio" name="checkbox-search" value="artist">
+            Artist</label>
         </section>
         <section class="options__item">
-            <input type="checkbox" name="album">
-            <label for="album">Album</label>
+            <label for="checkBoxAlbum">
+                <input id="checkBoxAlbum" type="radio" name="checkbox-search" value="album">
+            Album</label>
         </section>
         <section class="options__item">
-            <input type="checkbox" name="musicVideo">
-            <label for="musicVideo">Music Video</label>
+            <label for="checkBoxMusicVideo">
+                <input id="checkBoxMusicVideo" type="radio" name="checkbox-search" value="musicVideo">
+            Music Video</label>
         </section>
     </section>
   `;
-  return template;
+    return template;
 };
 
-export { navbar };
+export {navbar};
