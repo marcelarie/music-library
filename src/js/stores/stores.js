@@ -8,6 +8,7 @@ import {renderView} from '../views/renderView.js';
 import {get, getCountry} from '../api.js';
 import {createFragmentList} from '../helpers/helpers.js';
 import {artistModal} from '../views/components/ArtistModal.js';
+import {albumModal} from '../views/components/AlbumModal.js';
 import {songModal} from '../views/components/SongModal.js';
 import {modal} from '../views/components/Modal.js';
 
