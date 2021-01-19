@@ -1,17 +1,5 @@
 const status = {
-    page: 'home',
-    checkbox: {
-        country: {
-            checked: false,
-            value: ''
-        },
-        limit: false,
-        explicit: false,
-        artist: false,
-        album: false,
-        video: false,
-        song: false
-    }
+  page: 'home',
 };
 
-export {status};
+export { status };

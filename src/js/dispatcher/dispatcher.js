@@ -1,5 +1,5 @@
 import { createUrl } from '../helpers/helpers.js';
-import { search } from '../stores/stores.js';
+import { createSongModal, search, showOrHideFilter } from '../stores/stores.js';
 
 const dispatcher = status => {
   $(document).off().find('*').off();
@@ -15,6 +15,8 @@ const dispatcher = status => {
       $('#checkBoxMusicVideo').on('click', validateInputs);
       $('#countryModal').on('change', checkFilterActive);
       $('#limitModal').on('change', checkFilterActive);
+      $('#filterModal').on('click', showOrHideFilter);
+      $('.clickCardItem').on('click', openModal);
       break;
   }
 };
@@ -29,6 +31,23 @@ const validateInputs = () => {
 const checkFilterActive = e => {
   if ($(e.target).siblings().is(':checked')) {
     validateInputs();
+  }
+};
+
+const openModal = e => {
+  e.preventDefault();
+  const positionArray = $(`.main ${e.target.nodeName}`).index(e.target);
+  const searchType = $('.options input:checked').val();
+  switch (searchType) {
+    case 'song':
+      createSongModal(positionArray);
+      break;
+    case '':
+      break;
+    case '':
+      break;
+    case '':
+      break;
   }
 };
 
