@@ -29,7 +29,7 @@ const videoModal = ({
         <button>⭐</button>
       </section>
       <section class="song-content__info">
-         <img src="${artworkUrl100}" alt="${trackName}">
+        <img src="${artworkUrl100}" alt="${trackName}">
         <p>Name of the song: ${trackName}</p>
         <p>Artist name: ${artistName}</p>
         <p>Song Price: ${trackPrice}</p>

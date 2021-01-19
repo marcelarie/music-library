@@ -4,10 +4,12 @@
 @import './options.css';
 @import './filter.css';
 @import './footer.css';
+@import './video-modal.css';
 
 :root {
     --black: #282828;
     --dark-black: #191919;
+    /* sunrise */
     --light-black: #212226;
     --blue: #2e9599;
     --yellow: #f7dc68;

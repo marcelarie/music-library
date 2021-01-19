@@ -1,0 +1,30 @@
+.song-modal {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.song-modal__player {
+}
+
+.song-modal__player video {
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+}
+
+.song-modal__content {
+    padding: 0 0.5em;
+}
+.song-content__cover h3 {
+    color: white;
+    font-weight: 300;
+}
+.song-content__cover h2 {
+    color: var(--blue);
+}
+
+.song-content__info {
+    color: white;
+}
