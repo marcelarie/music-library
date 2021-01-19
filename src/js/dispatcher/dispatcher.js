@@ -1,5 +1,5 @@
 import {createUrl} from '../helpers/helpers.js';
-import {createSongModal, search, showOrHideFilter} from '../stores/stores.js';
+import {createSongModal, createArtistModal, createAlbumModal, createVideoModal, search, showOrHideFilter} from '../stores/stores.js';
 
 const dispatcher = status => {
     $(document).off().find('*').off();

@@ -7,8 +7,11 @@ import {musicCard} from '../views/components/MusicCard.js';
 import {renderView} from '../views/renderView.js';
 import {get, getCountry} from '../api.js';
 import {createFragmentList} from '../helpers/helpers.js';
+import {artistModal} from '../views/components/ArtistModal.js';
 import {songModal} from '../views/components/SongModal.js';
 import {modal} from '../views/components/Modal.js';
+
+
 let searchArray = [];
 const mainPage = () => {
     getCountry().done(result => {
@@ -38,6 +41,7 @@ const showOrHideFilter = e => {
 };
 
 const createSongModal = positionArray => {
+    console.log(searchArray)
     renderView(
         createFragmentList([searchArray[positionArray]], songModal),
         $('.modal'),
@@ -62,4 +66,7 @@ const createVideoModal = positionArray => {
     );
 };
 
-export {mainPage, search, showOrHideFilter, createSongModal};
+export {
+    mainPage, search, showOrHideFilter, createSongModal, createArtistModal,
+    createVideoModal, createAlbumModal
+};
