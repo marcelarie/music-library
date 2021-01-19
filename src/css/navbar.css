@@ -19,9 +19,11 @@ nav input {
     all: unset;
     height: 1.45em;
     flex: 5;
+    color: var(--blue);
     background-color: var(--dark-black);
     border: 2px solid var(--black);
     border-radius: 5px;
+    padding-left: 0.5em;
 }
 nav input:hover {
     border: 2px solid var(--blue);

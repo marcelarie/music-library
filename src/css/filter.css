@@ -8,6 +8,7 @@
     flex-direction: column;
     margin: auto 0;
     background-color: var(--light-black);
+    justify-content: center;
 }
 
 .filter__drop-down label {
@@ -16,9 +17,10 @@
 }
 .filter__drop-down input {
     all: unset;
-    width: 20px;
-    height: 20px;
-    background-color: var(--yellow);
+    width: 15px;
+    height: 15px;
+    background-color: var(--dark-black);
+    border: 2px solid var(--blue);
     margin: 0 0.5em;
     border-radius: 50%;
 }
@@ -32,4 +34,8 @@
     text-align: center;
     margin: 0 auto;
     width: 70%;
+}
+
+.filter__drop-down input:checked{
+    background-color: var(--blue);
 }

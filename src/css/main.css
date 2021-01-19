@@ -3,6 +3,7 @@
 @import './music-card.css';
 @import './options.css';
 @import './filter.css';
+@import './footer.css';
 
 :root {
     --black: #282828;

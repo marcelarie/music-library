@@ -1,10 +1,10 @@
 const footer = () => {
-  const template = `
+    const template = `
   <footer class="footer">
-    <button id="showModal" />
+    <button class='show-modal' id="showModal" />
   </footer>
   `;
-  return template;
+    return template;
 };
 
-export { footer };
+export {footer};
