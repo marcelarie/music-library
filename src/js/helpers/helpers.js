@@ -7,11 +7,7 @@ const createFragmentList = (data, component) => {
 };
 
 const createUrl = (input, typeSearch) => {
-  let url = `term=${input}`;
-  if (typeSearch === 'artist') {
-    typeSearch = 'musicArtist';
-  }
-  url = `${url}&entity=${typeSearch}`;
+  let url = `term=${input}&entity=${typeSearch}`;
   if ($('#countryModalCheckBox').is(':checked')) {
     url = `${url}&country=${$('#countryModal').val()}`;
   }

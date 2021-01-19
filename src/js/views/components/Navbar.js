@@ -14,7 +14,7 @@ const navbar = () => {
         </section>
         <section class="options__item">
             <label for="checkBoxArtist">
-                <input id="checkBoxArtist" type="radio" name="checkbox-search" value="artist">
+                <input id="checkBoxArtist" type="radio" name="checkbox-search" value="musicArtist">
             Artist</label>
         </section>
         <section class="options__item">
