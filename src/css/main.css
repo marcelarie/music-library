@@ -2,6 +2,7 @@
 @import './navbar.css';
 @import './music-card.css';
 @import './options.css';
+@import './filter.css';
 
 :root {
     --black: #282828;

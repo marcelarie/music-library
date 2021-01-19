@@ -2,9 +2,9 @@ const filter = () => {
     const template = `
 <section class="filter">
     <button id="filterModal"></button>
-    <section>
+    <section class="filter__drop-down">
         <label for="country">
-            <input type="checkbox" name="country" id="countryModalCheckBox">
+            <input type="checkbox" name="country" id="countryModalCheckBox" >
             Country
             <select name="country" id="countryModal">
             </select>

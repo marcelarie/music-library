@@ -1,0 +1,35 @@
+.filter {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--blue);
+}
+
+.filter__drop-down {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    background-color: var(--light-black);
+}
+
+.filter__drop-down label {
+    display: flex;
+    margin: 0.2rem 0;
+}
+.filter__drop-down input {
+    all: unset;
+    width: 20px;
+    height: 20px;
+    background-color: var(--yellow);
+    margin: 0 0.5em;
+    border-radius: 50%;
+}
+.filter__drop-down select{
+    all: unset;
+    background-color: var(--dark-black);
+    height: 1.15em;
+    font-size: 0.8em;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+}
