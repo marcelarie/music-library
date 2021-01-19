@@ -1,5 +1,5 @@
 const filter = () => {
-  const template = `
+    const template = `
 <section class="filter">
     <button id="filterModal"></button>
     <section>
@@ -31,7 +31,7 @@ const filter = () => {
         </label>
     </section>
 </section> `;
-  return template;
+    return template;
 };
 
-export { filter };
+export {filter};

@@ -1,0 +1,28 @@
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--light-black);
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    border-bottom: 2px solid var(--black);
+    padding:0.3em 1em;
+}
+nav h1 {
+    color: var(--blue);
+    font-size: 1.5em;
+    flex: 2;
+    align-self: center;
+}
+nav input {
+    align-self: center;
+    all: unset;
+    height: 1.45em;
+    flex: 5;
+    background-color: var(--dark-black);
+    border: 2px solid var(--black);
+    border-radius: 5px;
+}
+nav input:hover {
+    border: 2px solid var(--blue);
+}

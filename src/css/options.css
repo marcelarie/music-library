@@ -1,0 +1,25 @@
+
+.options {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    height: 2.5rem;
+    align-items: center;
+}
+
+.options__items input {
+    all: unset;
+}
+.options__items label{
+    background-color: var(--light-black);
+    color: var(--blue);
+    padding: 0.3rem 0.75rem;
+    border-radius: 15px;
+    border: 1px solid var(--black);
+}
+
+.change-on-check:checked + label{
+    color: orange;
+}
