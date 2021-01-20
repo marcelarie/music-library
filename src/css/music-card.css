@@ -8,6 +8,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    position: relative;
     font-family: 'Montserrat', sans-serif;
 }
 .main section:first-child{
@@ -16,6 +17,8 @@
 
 .music-card-item section:last-child {
     width: 9rem;
+    display: flex;
+    flex-direction: column;
 }
 .music-card-item section:first-child{
     width: 7rem;
@@ -41,5 +44,16 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;
+}
+
+/* starred */
+.music-card-item section span {
+    font-size: 1.5em;
+    color: var(--yellow);
+    position: absolute;
+    top: 0;
+}
+.starred {
+    align-self: flex-end;
 }
 

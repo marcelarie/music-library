@@ -18,7 +18,9 @@ const collection = ({
         <p>Musical genre: ${primaryGenreName}</p>
         <p>Release date: ${releaseDate}</p>
         <p>Song Price: ${collectionPrice}</p>
-        <button id="starred">⭐</button>
+      <span class="material-icons starred"> 
+          star_border 
+      </span>
       </section>
     </section>
   </section>

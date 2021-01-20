@@ -5,6 +5,7 @@ import {
     hideModal,
     search,
     saveFavorite,
+    mainPage,
     showOrHideFilter,
 } from '../stores/stores.js';
 import {collection} from '../views/components/AlbumModal.js';
@@ -15,6 +16,7 @@ import {musicVideo} from '../views/components/VideoModal.js';
 const dispatcher = status => {
     $(document).off().find('*').off();
     $('.header input').on('input', validateInputs);
+    $('.header nav h1').on('click', mainPage);
     $('.options input').on('click', validateInputs);
     $('#countryModalCheckBox').on('click', validateInputs);
     $('#limitModalCheckBox').on('click', validateInputs);

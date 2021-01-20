@@ -24,7 +24,9 @@ const musicVideo = ({
       <section class="modal-type-content__cover">
           <h2>${trackName}</h2>
           <h3>${artistName}</h3>
-        <button id="starred">⭐</button>
+    <span class="material-icons">
+        star_border
+    </span>
       </section>
       <section class="modal-type-content__info">
         <img src="${artworkUrl100}" alt="${trackName}">

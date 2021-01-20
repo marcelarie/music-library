@@ -10,7 +10,6 @@ const musicCard = ({
 }) => {
     const title = collectionName ? collectionName : primaryGenreName;
     const type = (kind === 'music-video') ? 'musicVideo' : kind;
-    console.log(type)
     const template = `
   <section>
     <button data-wrapperType='${wrapperType === 'track' ? type : wrapperType}'
@@ -20,6 +19,9 @@ const musicCard = ({
     alt="${trackName}">
           </section>
           <section>
+              <span class="material-icons starred"> 
+                  star_border 
+              </span>
               <h2 class="clickCardItem">${trackName ? trackName : title}</h2>
               <h3 class="clickCardItem">${artistName}</h3>
           </section>
