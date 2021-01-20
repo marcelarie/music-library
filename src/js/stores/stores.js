@@ -54,6 +54,7 @@ const showOrHideFilter = e => {
 };
 
 const createModal = (positionArray, modalType) => {
+    $('#showOrHideModal').text('arrow_circle_down')
     renderView(
         createFragmentList([searchArray[positionArray]], modalType),
         $('.modal'),
@@ -66,6 +67,7 @@ const createModal = (positionArray, modalType) => {
     animationModal();
 };
 const hideModal = e => {
+    $('#showOrHideModal').text('arrow_circle_up')
     e.preventDefault();
     status.page = 'home';
     animationModal();

@@ -13,6 +13,7 @@
     all: unset;
 }
 .options__items label{
+    cursor: pointer;
     background-color: var(--light-black);
     color: var(--blue);
     padding: 0.3rem 0.75rem;

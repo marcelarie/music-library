@@ -2,11 +2,11 @@ const navbar = () => {
     const template = `
   <header class="header">
     <nav>
-      <h1>Libefy</h1>
+      <h1 class="no-select">Libefy</h1>
       <input type="text">
     </nav>
   </header>
-  <section class="options">
+  <section class=" no-select options">
         <section class="options__items">
             <input class="change-on-check" id="checkBoxSong" type="radio" name="checkbox-search" value="song" checked>
             <label for="checkBoxSong">Song</label>

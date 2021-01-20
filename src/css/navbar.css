@@ -6,13 +6,15 @@ nav {
     font-family: 'Montserrat', sans-serif;
     align-items: center;
     border-bottom: 2px solid var(--black);
-    padding:0.3em 1em;
+    padding:0.5em 1em;
 }
 nav h1 {
     color: var(--blue);
-    font-size: 1.5em;
+    font-size: 1.7em;
     flex: 2;
     align-self: center;
+    margin-right: 0.5em;
+    cursor: pointer;
 }
 nav input {
     align-self: center;
