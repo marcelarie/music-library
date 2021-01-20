@@ -1,5 +1,5 @@
 const artist = ({
-    artworkUrl100 = 'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
+    artworkUrl100 = 'https://i.ibb.co/PGwBzx7/Untitled.png',
     artistName,
     primaryGenreName,
     artistLinkUrl,
@@ -8,9 +8,14 @@ const artist = ({
   <section class="modal-type">
     <section class="modal-type__content">
       <section class="modal-type-content__cover">
+        <br>
           <img src="${artworkUrl100}" alt="${artistName}">
+        <br>
           <h2>${artistName}</h2>
-        <p>Musical genre: ${primaryGenreName}</p>
+        <br>
+      <section class="modal-type-content__info">
+        <p>Musical genre: <strong>${primaryGenreName}</strong></p>
+      </section>
       </section>
     </section>
     <section class="modal-type__player">
