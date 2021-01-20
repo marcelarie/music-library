@@ -1,101 +1,104 @@
-import { footer } from '../views/components/Footer.js';
-import { filter } from '../views/components/Filter.js';
-import { navbar } from '../views/components/Navbar.js';
-import { countryOptions } from '../views/components/CountryOptions.js';
-import { main } from '../views/components/Main.js';
-import { musicCard } from '../views/components/MusicCard.js';
-import { animationModal, renderView } from '../views/renderView.js';
-import { get, getCountry } from '../api.js';
+import {footer} from '../views/components/Footer.js';
+import {filter} from '../views/components/Filter.js';
+import {navbar} from '../views/components/Navbar.js';
+import {countryOptions} from '../views/components/CountryOptions.js';
+import {main} from '../views/components/Main.js';
+import {musicCard} from '../views/components/MusicCard.js';
+import {animationModal, renderView} from '../views/renderView.js';
+import {get, getCountry} from '../api.js';
 import {
-  createFragmentList,
-  updateLocalstorage,
-  compareObjects,
-  printStar,
+    createFragmentList,
+    updateLocalstorage,
+    compareObjects,
+    printStar,
 } from '../helpers/helpers.js';
-import { modal } from '../views/components/Modal.js';
-import { status } from '../actions/actions.js';
-import { dispatcher } from '../dispatcher/dispatcher.js';
+import {modal} from '../views/components/Modal.js';
+import {status} from '../actions/actions.js';
+import {dispatcher} from '../dispatcher/dispatcher.js';
 
 let searchArray = [];
 const mainPage = () => {
-  getCountry().done(result => {
-    const fragment = $(document.createDocumentFragment());
-    $(fragment).append(navbar);
-    $(fragment).append(filter);
-    $(fragment).append(main);
-    $(fragment).append(modal);
-    $(fragment).append(footer);
-    renderView(fragment);
-    if (status.favorites.length) {
-      renderView(createFragmentList(status.favorites, musicCard), $('.main'));
-      searchArray = status.favorites;
-      printStar(searchArray);
-    }
-    $(countryModal).append(createFragmentList(result, countryOptions));
-    $('#countryModal option[value = "US"]').attr('selected', 'selected');
-  });
+    getCountry().done(result => {
+        const fragment = $(document.createDocumentFragment());
+        $(fragment).append(navbar);
+        $(fragment).append(filter);
+        $(fragment).append(main);
+        $(fragment).append(modal);
+        $(fragment).append(footer);
+        renderView(fragment);
+        if (status.favorites.length) {
+            renderView(createFragmentList(status.favorites, musicCard), $('.main'));
+            searchArray = status.favorites;
+            printStar(searchArray);
+        }
+        $(countryModal).append(createFragmentList(result, countryOptions));
+        $('#countryModal option[value = "US"]').attr('selected', 'selected');
+    });
 };
 
 const search = url => {
-  get(url).done(({ results }) => {
-    searchArray = [...results];
-    console.log(searchArray);
-    renderView(createFragmentList(results, musicCard), $('.main'));
-    printStar(searchArray);
-  });
+    if ($('.main').is(':hidden')) {
+        animationModal();
+    }
+    get(url).done(({results}) => {
+        searchArray = [...results];
+        console.log(searchArray);
+        renderView(createFragmentList(results, musicCard), $('.main'));
+        printStar(searchArray);
+    });
 };
 
 const showOrHideFilter = e => {
-  e.preventDefault();
-  $('.filter__drop-down').toggle('none');
+    e.preventDefault();
+    $('.filter__drop-down').toggle('none');
 };
 
 const createModal = (positionArray, modalType) => {
-  renderView(
-    createFragmentList([searchArray[positionArray]], modalType),
-    $('.modal'),
-  );
-  status.favorites.forEach(fav => {
-    if (compareObjects(searchArray[positionArray], fav)) {
-      $('.modal .starred').text('star');
-    }
-  });
-  animationModal();
+    renderView(
+        createFragmentList([searchArray[positionArray]], modalType),
+        $('.modal'),
+    );
+    status.favorites.forEach(fav => {
+        if (compareObjects(searchArray[positionArray], fav)) {
+            $('.modal .starred').text('star');
+        }
+    });
+    animationModal();
 };
 const hideModal = e => {
-  e.preventDefault();
-  status.page = 'home';
-  animationModal();
-  dispatcher(status.page);
+    e.preventDefault();
+    status.page = 'home';
+    animationModal();
+    dispatcher(status.page);
 };
 
 const starManager = (positionStar, e) => {
-  const sameObject = status.favorites.filter(object => {
-    return compareObjects(object, searchArray[positionStar]);
-  });
-
-  if (!sameObject.length) {
-    $(e.target).text('star');
-    updateLocalstorage(searchArray[positionStar]);
-  } else {
-    $(e.target).text('star_border');
-    status.favorites = status.favorites.filter(object => {
-      return !compareObjects(object, searchArray[positionStar]);
+    const sameObject = status.favorites.filter(object => {
+        return compareObjects(object, searchArray[positionStar]);
     });
-    updateLocalstorage();
-  }
-  printStar(searchArray);
-  console.log(status.page);
-  if (status.page === 'favorite') {
-    mainPage();
-  }
+
+    if (!sameObject.length) {
+        $(e.target).text('star');
+        updateLocalstorage(searchArray[positionStar]);
+    } else {
+        $(e.target).text('star_border');
+        status.favorites = status.favorites.filter(object => {
+            return !compareObjects(object, searchArray[positionStar]);
+        });
+        updateLocalstorage();
+    }
+    printStar(searchArray);
+    console.log(status.page);
+    if (status.page === 'favorite') {
+        mainPage();
+    }
 };
 
 export {
-  mainPage,
-  search,
-  showOrHideFilter,
-  createModal,
-  hideModal,
-  starManager,
+    mainPage,
+    search,
+    showOrHideFilter,
+    createModal,
+    hideModal,
+    starManager,
 };

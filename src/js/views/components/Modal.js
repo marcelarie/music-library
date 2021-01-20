@@ -1,9 +1,9 @@
 const modal = () => {
-  const template = `
+    const template = `
 <section class="modal none">
 </section>
 `;
-  return template;
+    return template;
 };
 
-export { modal };
+export {modal};
