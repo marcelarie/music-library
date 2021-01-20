@@ -25,6 +25,10 @@ const mainPage = () => {
         $(fragment).append(modal);
         $(fragment).append(footer);
         renderView(fragment);
+        if (status.favorites.length) {
+            renderView(createFragmentList(status.favorites, musicCard),
+                $('.main'));
+        }
         $(countryModal).append(createFragmentList(result, countryOptions));
         $('#countryModal option[value = "US"]').attr('selected', 'selected');
     });

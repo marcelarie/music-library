@@ -1,6 +1,8 @@
 const status = {
-  page: 'home',
-  positionArray: 0,
+    page: 'home',
+    positionArray: 0,
+    favorites: [],
 };
 
-export { status };
+
+export {status};
