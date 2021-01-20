@@ -1,5 +1,5 @@
 const status = {
-    page: 'home',
+    page: 'favorite',
     positionArray: 0,
     favorites: []
 };
