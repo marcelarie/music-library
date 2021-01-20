@@ -32,26 +32,27 @@
 .modal-type-content__cover h3 {
     color: var(--white);
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .modal-type__content {
     margin: 0 auto;
     width: 80vw;
 }
-.modal-type-content__info p:last-child{
+.modal-type-content__info a{
     color: var(--orange);
+    font-weight: 600;
 }
-.modal-type-content__info p:last-child:hover{
+.modal-type-content__info a:hover{
     text-decoration: underline;
 }
-.modal-type-content__info p:last-child:active{
+.modal-type-content__info a:active{
     opacity: 0.8;
     transition: 0.2s;
 }
 .modal-type-content__info p {
     color: var(--blue);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.9em;
     line-height: 1.7em;
 }
@@ -90,5 +91,23 @@
     bottom: 0.2rem;
     transform: translate(calc(50vw - 50%));
 }
+.video-player {
+    position: unset;
+    bottom: unset;
+    transform: unset;
+}
+.video-player video {
+    width: 100%;
+    margin-bottom: 0.5em;
+}
 .modal-type__player audio {
+}
+.big-font {
+    font-size: larger;
+}
+.bigger-font {
+    font-size:x-large;
+}
+.smaller-font {
+    font-size: smaller;
 }

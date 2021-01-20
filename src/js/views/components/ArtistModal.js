@@ -11,20 +11,17 @@ const artist = ({
         <br>
           <img src="${artworkUrl100}" alt="${artistName}">
         <br>
-          <h2>${artistName}</h2>
-        <br>
-      <section class="modal-type-content__info">
-        <p>Musical genre: <strong>${primaryGenreName}</strong></p>
-      </section>
-      </section>
-    </section>
-    <section class="modal-type__player">
-    <form target="_blank" action="${artistLinkUrl}">
-        <button type="submit">iTunes link</button>
-    </form>
+          <h2>${artistName}
     <span class="material-icons starred">
         star_border
     </span>
+    </h2>
+        <br>
+      <section class="modal-type-content__info bigger-font">
+        <p>Musical genre: <strong>${primaryGenreName}</strong></p>
+     <a class="smaller-font" href="${artistLinkUrl}" target="_blank">Song Link in iTunes</a>
+      </section>
+      </section>
     </section>
   </section>
   `;

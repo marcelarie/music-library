@@ -39,7 +39,7 @@ const song = ({
         <p>Song length: <strong>${trackTime} min</strong></p>
         <p>Release date: <strong>${date}</strong></p >
         <p>Musical genre: <strong>${primaryGenreName}</strong></p>
-     <a href="${trackViewUrl}" target="_blank"><p>Song Link in iTunes </p></a>
+     <a href="${trackViewUrl}" target="_blank">Song Link in iTunes</a>
       </section >
     </section >
     <section class="modal-type__player">

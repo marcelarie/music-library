@@ -23,7 +23,7 @@ const collection = ({
       </span>
     </h2>
           <h3>${artistName}</h3>
-    <section class="modal-type-content__info">
+    <section class="modal-type-content__info bigger-font">
         <br>
         <p>Track Count: <strong>${trackCount}</strong></p>
         <p>Musical genre: <strong>${primaryGenreName}</strong></p>
