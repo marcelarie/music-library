@@ -30,7 +30,9 @@ const recoverFavorites = () => {
 };
 
 const updateLocalstorage = element => {
-    status.favorites.push(element)
+    if (element) {
+        status.favorites.push(element)
+    }
     localStorage.setItem('favorites', JSON.stringify(status.favorites))
 };
 

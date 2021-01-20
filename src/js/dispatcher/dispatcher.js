@@ -4,10 +4,11 @@ import {
     createModal,
     hideModal,
     search,
-    saveFavorite,
+    starManager,
     mainPage,
     showOrHideFilter,
 } from '../stores/stores.js';
+// vvvvvvv dont touch vvvvvvv
 import {collection} from '../views/components/AlbumModal.js';
 import {artist} from '../views/components/ArtistModal.js';
 import {song} from '../views/components/SongModal.js';
@@ -24,13 +25,13 @@ const dispatcher = status => {
     $('#countryModal').on('change', checkFilterActive);
     $('#limitModal').on('change', checkFilterActive);
     $('#filterModal').on('click', showOrHideFilter);
+    $('.starred').on('click', dispatcherStar);
     switch (status) {
         case 'home':
             $('.clickCardItem').on('click', openModal);
             break;
-        case 'song':
-            $('#starred').on('click', saveFavorite);
-            //$('#song').on('click', toggleInfoOrPlay)
+        default:
+            $('.starred').on('click', dispatcherStar);
             $('#showOrHideModal').on('click', hideModal);
             break;
     }
@@ -59,4 +60,16 @@ const openModal = e => {
     createModal(status.positionArray, eval(searchType));
 };
 
-export {dispatcher};
+const dispatcherStar = e => {
+    e.preventDefault();
+
+    if (status.page === 'home') {
+        starManager($('.starred').index(e.target), e);
+    } else {
+        starManager(status.positionArray, e);
+    };
+};
+
+
+
+export {dispatcher, dispatcherStar};

@@ -24,7 +24,7 @@ const musicVideo = ({
       <section class="modal-type-content__cover">
           <h2>${trackName}</h2>
           <h3>${artistName}</h3>
-    <span class="material-icons">
+    <span class="material-icons starred">
         star_border
     </span>
       </section>
