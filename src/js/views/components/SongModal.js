@@ -11,18 +11,18 @@ const songModal = ({
   trackViewUrl,
 }) => {
   const template = `
-  <section class="song-modal">
-    <section class="song-modal__buttons">
+  <section class="modal-type">
+    <section class="modal-type__buttons">
         <button id="songModalPlay">play</button>
         <button id="songModalInfo">info</button>
     </section>
-    <section class="song-modal__content">
-      <section class="song-content__cover">
+    <section class="modal-type__content">
+      <section class="modal-type-content__cover">
           <img src="${artworkUrl100}" alt="${trackName}">
           <h2>${trackName}</h2>
           <h3>${artistName}</h3>
       </section>
-      <section class="song-content__info">
+      <section class="modal-type-content__info">
         <p>Name of the song: ${trackName}</p>
         <p>Artist name: ${artistName}</p>
         <p>Album name: ${collectionName}</p>
@@ -33,7 +33,7 @@ const songModal = ({
         <p>Song Link in iTunes: ${trackViewUrl}</p>
       </section>
     </section>
-    <section class="song-modal__player">
+    <section class="modal-type__player">
         <audio name="media" controls>
           <source src="${previewUrl}" type="audio/x-m4a">
         </audio>

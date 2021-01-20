@@ -57,4 +57,15 @@ const hideModal = e => {
   dispatcher(status.page);
 };
 
-export { mainPage, search, showOrHideFilter, createModal, hideModal };
+const saveFavorite = () => {
+  //updateLocalstorage(searchArray[status.positionArray]);
+};
+
+export {
+  mainPage,
+  search,
+  showOrHideFilter,
+  createModal,
+  hideModal,
+  saveFavorite,
+};

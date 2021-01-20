@@ -1,18 +1,16 @@
-
 const albumModal = ({
-    artworkUrl100 =
-    'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
-    collectionName,
-    artistName,
-    collectionPrice,
-    trackCount,
-    releaseDate,
-    primaryGenreName,
+  artworkUrl100 = 'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
+  collectionName,
+  artistName,
+  collectionPrice,
+  trackCount,
+  releaseDate,
+  primaryGenreName,
 }) => {
-    const template = `
-  <section class="song-modal">
-    <section class="song-modal__content">
-      <section class="song-content__cover">
+  const template = `
+  <section class="modal-type">
+    <section class="modal-type__content">
+      <section class="modal-type-content__cover">
           <img src="${artworkUrl100}" alt="${artistName}">
           <h2>${collectionName}</h2>
           <h3>${artistName}</h3>
@@ -24,7 +22,7 @@ const albumModal = ({
     </section>
   </section>
   `;
-    return template;
+  return template;
 };
 
-export {albumModal};
+export { albumModal };

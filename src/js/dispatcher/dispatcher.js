@@ -28,7 +28,7 @@ const dispatcher = status => {
     case 'songModal':
       //$('#songModalInfo').on('click', toggleInfoOrPlay)
       $('#showOrHideModal').on('click', hideModal);
-      console.log($('#showOrHideModal'));
+      $('#starred').on('click', saveFavorite);
       break;
   }
 };
@@ -48,22 +48,22 @@ const checkFilterActive = e => {
 
 const openModal = e => {
   e.preventDefault();
-  const positionArray = $(`.main ${e.target.nodeName}`).index(e.target);
+  status.positionArray = $(`.main ${e.target.nodeName}`).index(e.target);
   const searchType = $('.options input:checked').val();
   console.log(searchType);
   switch (searchType) {
     case 'song':
       status.page = 'songModal';
-      createModal(positionArray, songModal);
+      createModal(status.positionArray, songModal);
       break;
     case 'musicArtist':
-      createModal(positionArray, artistModal);
+      createModal(status.positionArray, artistModal);
       break;
     case 'album':
-      createModal(positionArray, albumModal);
+      createModal(status.positionArray, albumModal);
       break;
     case 'musicVideo':
-      createModal(positionArray, videoModal);
+      createModal(status.positionArray, videoModal);
       break;
   }
 };

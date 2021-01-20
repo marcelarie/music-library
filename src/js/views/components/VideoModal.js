@@ -1,34 +1,32 @@
-
 const videoModal = ({
-    artworkUrl100 =
-    'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
-    trackName,
-    artistName,
-    trackPrice,
-    releaseDate,
-    trackTimeMillis,
-    primaryGenreName,
-    previewUrl,
-    trackViewUrl
+  artworkUrl100 = 'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
+  trackName,
+  artistName,
+  trackPrice,
+  releaseDate,
+  trackTimeMillis,
+  primaryGenreName,
+  previewUrl,
+  trackViewUrl,
 }) => {
-    const template = `
-  <section class="song-modal">
-    <section class="song-modal__buttons">
+  const template = `
+  <section class="modal-type">
+    <section class="modal-type__buttons">
         <button>play</button>
         <button>info</button>
     </section>
-    <section class="song-modal__player">
+    <section class="modal-type__player">
         <video name="media" controls>
           <source src="${previewUrl}" type="audio/x-m4a">
         </video>
     </section>
-    <section class="song-modal__content">
-      <section class="song-content__cover">
+    <section class="modal-type__content">
+      <section class="modal-type-content__cover">
           <h2>${trackName}</h2>
           <h3>${artistName}</h3>
-        <button>⭐</button>
+        <button id="starred">⭐</button>
       </section>
-      <section class="song-content__info">
+      <section class="modal-type-content__info">
         <img src="${artworkUrl100}" alt="${trackName}">
         <p>Name of the song: ${trackName}</p>
         <p>Artist name: ${artistName}</p>
@@ -41,7 +39,7 @@ const videoModal = ({
     </section>
   </section>
   `;
-    return template;
+  return template;
 };
 
-export {videoModal};
+export { videoModal };
