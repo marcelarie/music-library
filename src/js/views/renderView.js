@@ -1,9 +1,14 @@
-import {dispatcher} from '../dispatcher/dispatcher.js'
-import {status} from '../actions/actions.js'
+import { dispatcher } from '../dispatcher/dispatcher.js';
+import { status } from '../actions/actions.js';
 
 const renderView = (fragment, element = '#root') => {
-    $(element).html(fragment);
-    dispatcher(status.page);
+  $(element).html(fragment);
+  dispatcher(status.page);
 };
 
-export {renderView};
+const animationModal = () => {
+  $('.main').toggle('none');
+  $('.modal').toggle('none');
+};
+
+export { renderView, animationModal };

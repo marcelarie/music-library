@@ -1,6 +1,6 @@
 const modal = () => {
   const template = `
-<section class="modal">
+<section class="modal none">
 </section>
 `;
   return template;
