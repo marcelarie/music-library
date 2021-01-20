@@ -1,16 +1,23 @@
 const musicCard = ({
-  artworkUrl100 = 'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
-  artistName,
-  trackName,
-  collectionName,
-  primaryGenreName,
+    artworkUrl100 =
+    'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
+    artistName,
+    trackName,
+    collectionName,
+    primaryGenreName,
+    wrapperType,
+    kind
 }) => {
-  const title = collectionName ? collectionName : primaryGenreName;
-  const template = `
+    const title = collectionName ? collectionName : primaryGenreName;
+    const type = (kind === 'music-video') ? 'musicVideo' : kind;
+    console.log(type)
+    const template = `
   <section>
-    <button class="music-card-item">
+    <button data-wrapperType='${wrapperType === 'track' ? type : wrapperType}'
+    class="music-card-item">
           <section>
-              <img class="clickCardItem" src="${artworkUrl100}" alt="${trackName}">
+              <img class="clickCardItem" src="${artworkUrl100}" 
+    alt="${trackName}">
           </section>
           <section>
               <h2 class="clickCardItem">${trackName ? trackName : title}</h2>
@@ -19,7 +26,7 @@ const musicCard = ({
     </button>
   </section>
   `;
-  return template;
+    return template;
 };
 
-export { musicCard };
+export {musicCard};

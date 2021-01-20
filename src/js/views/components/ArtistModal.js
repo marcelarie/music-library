@@ -1,10 +1,10 @@
-const artistModal = ({
-  artworkUrl100 = 'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
-  artistName,
-  primaryGenreName,
-  artistLinkUrl,
+const artist = ({
+    artworkUrl100 = 'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
+    artistName,
+    primaryGenreName,
+    artistLinkUrl,
 }) => {
-  const template = `
+    const template = `
   <section class="modal-type">
     <section class="modal-type__content">
       <section class="modal-type-content__cover">
@@ -21,7 +21,7 @@ const artistModal = ({
     </section>
   </section>
   `;
-  return template;
+    return template;
 };
 
-export { artistModal };
+export {artist};

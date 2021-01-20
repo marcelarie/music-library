@@ -1,15 +1,15 @@
-const videoModal = ({
-  artworkUrl100 = 'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
-  trackName,
-  artistName,
-  trackPrice,
-  releaseDate,
-  trackTimeMillis,
-  primaryGenreName,
-  previewUrl,
-  trackViewUrl,
+const musicVideo = ({
+    artworkUrl100 = 'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
+    trackName,
+    artistName,
+    trackPrice,
+    releaseDate,
+    trackTimeMillis,
+    primaryGenreName,
+    previewUrl,
+    trackViewUrl,
 }) => {
-  const template = `
+    const template = `
   <section class="modal-type">
     <section class="modal-type__buttons">
         <button>play</button>
@@ -39,7 +39,7 @@ const videoModal = ({
     </section>
   </section>
   `;
-  return template;
+    return template;
 };
 
-export { videoModal };
+export {musicVideo};
