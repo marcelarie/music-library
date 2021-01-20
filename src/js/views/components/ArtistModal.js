@@ -17,7 +17,7 @@ const artist = ({
     <form target="_blank" action="${artistLinkUrl}">
         <button type="submit">iTunes link</button>
     </form>
-        <button>⭐</button>
+        <button id="starred">⭐</button>
     </section>
   </section>
   `;

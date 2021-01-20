@@ -1,8 +1,7 @@
 const status = {
     page: 'home',
     positionArray: 0,
-    favorites: [],
+    favorites: []
 };
-
 
 export {status};

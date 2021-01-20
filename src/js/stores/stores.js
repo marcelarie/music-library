@@ -6,11 +6,7 @@ import {main} from '../views/components/Main.js';
 import {musicCard} from '../views/components/MusicCard.js';
 import {animationModal, renderView} from '../views/renderView.js';
 import {get, getCountry} from '../api.js';
-import {createFragmentList} from '../helpers/helpers.js';
-import {artist} from '../views/components/ArtistModal.js';
-import {musicVideo} from '../views/components/VideoModal.js';
-import {collection} from '../views/components/AlbumModal.js';
-import {song} from '../views/components/SongModal.js';
+import {createFragmentList, updateLocalstorage, compareObjects} from '../helpers/helpers.js';
 import {modal} from '../views/components/Modal.js';
 import {status} from '../actions/actions.js';
 import {dispatcher} from '../dispatcher/dispatcher.js';
@@ -28,11 +24,13 @@ const mainPage = () => {
         if (status.favorites.length) {
             renderView(createFragmentList(status.favorites, musicCard),
                 $('.main'));
+            searchArray = status.favorites
         }
         $(countryModal).append(createFragmentList(result, countryOptions));
         $('#countryModal option[value = "US"]').attr('selected', 'selected');
     });
 };
+
 
 const search = url => {
     get(url).done(({results}) => {
@@ -61,8 +59,14 @@ const hideModal = e => {
     dispatcher(status.page);
 };
 
-const saveFavorite = () => {
-    //updateLocalstorage(searchArray[status.positionArray]);
+const saveFavorite = e => {
+    e.preventDefault();
+    const sameObject = status.favorites.filter(object => {
+        return compareObjects(object, searchArray[status.positionArray])
+    })
+    if (!sameObject.length) {
+        updateLocalstorage(searchArray[status.positionArray]);
+    };
 };
 
 export {

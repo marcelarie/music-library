@@ -37,7 +37,7 @@ const song = ({
         <audio name="media" controls>
           <source src="${previewUrl}" type="audio/x-m4a">
         </audio>
-        <button>⭐</button>
+        <button id="starred">⭐</button>
     </section>
   </section>
   `;

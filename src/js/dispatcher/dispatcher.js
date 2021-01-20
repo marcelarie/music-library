@@ -4,6 +4,7 @@ import {
     createModal,
     hideModal,
     search,
+    saveFavorite,
     showOrHideFilter,
 } from '../stores/stores.js';
 import {collection} from '../views/components/AlbumModal.js';
@@ -26,9 +27,9 @@ const dispatcher = status => {
             $('.clickCardItem').on('click', openModal);
             break;
         case 'song':
+            $('#starred').on('click', saveFavorite);
             //$('#song').on('click', toggleInfoOrPlay)
             $('#showOrHideModal').on('click', hideModal);
-            // $('#starred').on('click', saveFavorite);
             break;
     }
 };
@@ -51,6 +52,7 @@ const openModal = e => {
     status.positionArray = $(`.main ${e.target.nodeName}`).index(e.target);
     const searchType = $(e.target).closest('button').data('wrappertype');
     console.log(searchType);
+
     status.page = `${searchType}`;
     createModal(status.positionArray, eval(searchType));
 };

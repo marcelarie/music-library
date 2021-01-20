@@ -1,3 +1,5 @@
+import {status} from '../actions/actions.js'
+
 const createFragmentList = (data, component) => {
     const fragment = $(document.createDocumentFragment());
     data.forEach(element => {
@@ -24,7 +26,20 @@ const createUrl = (input, typeSearch) => {
 
 const recoverFavorites = () => {
     if (localStorage.getItem('favorites'))
-        status.favorites = localStorage.getItem('favorites');
+        status.favorites = JSON.parse(localStorage.getItem('favorites'));
 };
 
-export {createFragmentList, createUrl, recoverFavorites};
+const updateLocalstorage = element => {
+    status.favorites.push(element)
+    localStorage.setItem('favorites', JSON.stringify(status.favorites))
+};
+
+const compareObjects = (original, current) => {
+    if (JSON.stringify(original) === JSON.stringify(current)) {
+        return true;
+    } else {
+        return false;
+    };
+}
+
+export {createFragmentList, createUrl, recoverFavorites, updateLocalstorage, compareObjects};
