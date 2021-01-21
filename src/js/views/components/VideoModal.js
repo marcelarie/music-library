@@ -1,32 +1,32 @@
-import {millisToMinutesAndSeconds} from '../../helpers/helpers.js'
+import { millisToMinutesAndSeconds } from '../../helpers/helpers.js';
 
 const musicVideo = ({
-    artworkUrl100 = 'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
-    trackName,
-    artistName,
-    trackPrice,
-    releaseDate,
-    trackTimeMillis,
-    primaryGenreName,
-    previewUrl,
-    trackViewUrl,
-    currency
+  artworkUrl100 = 'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
+  trackName,
+  artistName,
+  trackPrice,
+  releaseDate,
+  trackTimeMillis,
+  primaryGenreName,
+  previewUrl,
+  trackViewUrl,
+  currency,
 }) => {
-    const date = new Date(releaseDate).toLocaleDateString()
-    const trackTime = millisToMinutesAndSeconds(trackTimeMillis)
-    const template = `
-  <section class="modal-type">
+  const date = new Date(releaseDate).toLocaleDateString();
+  const trackTime = millisToMinutesAndSeconds(trackTimeMillis);
+  const template = `
+  <section class="modal-type" data-modalType="song">
     <section class="modal-type__buttons">
-        <button>play</button>
-        <button>info</button>
-    </section>
-    <section class="modal-type__player video-player">
-        <video name="media" controls>
-          <source src="${previewUrl}" type="audio/x-m4a">
-        </video>
+        <button id="modalPlay">play</button>
+        <button id="modalInfo">info</button>
     </section>
     <section class="modal-type__content">
       <section class="modal-type-content__cover">
+        <section class="modal-type__player video-player">
+          <video id="mediaPlayer" name="media" controls>
+            <source src="${previewUrl}" type="audio/x-m4a">
+          </video>
+        </section>
           <h2>${trackName}
     <span class="material-icons starred">
         star_border
@@ -36,7 +36,7 @@ const musicVideo = ({
           <h3>${artistName}</h3>
     <br>
       </section>
-      <section class="modal-type-content__info big-font">
+      <section class="modal-type-content__info big-font none">
         <img src="${artworkUrl100}" alt="${trackName}">
         <p>Name of the song: <strong>${trackName}</strong></p>
         <p>Artist name: <strong>${artistName}</strong></p>
@@ -49,7 +49,7 @@ const musicVideo = ({
     </section>
   </section>
   `;
-    return template;
+  return template;
 };
 
-export {musicVideo};
+export { musicVideo };

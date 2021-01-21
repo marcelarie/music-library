@@ -7,12 +7,16 @@ import {
   starManager,
   mainPage,
   showOrHideFilter,
+  changeInfoOrFrontFace,
+  playOrPause,
+  checkModal,
 } from '../stores/stores.js';
 // vvvvvvv dont touch vvvvvvv
 import { collection } from '../views/components/AlbumModal.js';
 import { artist } from '../views/components/ArtistModal.js';
 import { song } from '../views/components/SongModal.js';
 import { musicVideo } from '../views/components/VideoModal.js';
+import { animationModal } from '../views/renderView.js';
 
 const dispatcher = status => {
   $(document).off().find('*').off();
@@ -28,8 +32,13 @@ const dispatcher = status => {
   $('.starred').on('click', dispatcherStar);
   if (status === 'home' || status === 'favorite') {
     $('.clickCardItem').on('click', openModal);
+    $('#showOrHideModal').on('click', checkModal);
   } else {
     $('#showOrHideModal').on('click', hideModal);
+    if (status === 'song' || status === 'musicVideo') {
+      $('#modalInfo').on('click', changeInfoOrFrontFace);
+      $('#modalPlay').on('click', playOrPause);
+    }
   }
 };
 
@@ -51,7 +60,6 @@ const openModal = e => {
   e.preventDefault();
   status.positionArray = $(`.main ${e.target.nodeName}`).index(e.target);
   const searchType = $(e.target).closest('button').data('wrappertype');
-  console.log(searchType);
 
   status.page = `${searchType}`;
   createModal(status.positionArray, eval(searchType));

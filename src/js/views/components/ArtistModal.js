@@ -5,7 +5,7 @@ const artist = ({
     artistLinkUrl,
 }) => {
     const template = `
-  <section class="modal-type">
+  <section class="modal-type" data-modalType="song">
     <section class="modal-type__content">
       <section class="modal-type-content__cover">
         <br>

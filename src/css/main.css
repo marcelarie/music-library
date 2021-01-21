@@ -29,6 +29,12 @@ body {
     padding: 2em;
     flex-wrap: wrap;
 }
+.favorites-message{
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 1.7em;
+}
 .no-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;

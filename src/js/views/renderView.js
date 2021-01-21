@@ -6,9 +6,9 @@ const renderView = (fragment, element = '#root') => {
   dispatcher(status.page);
 };
 
-const animationModal = () => {
-  $('.main').toggle('none');
-  $('.modal').toggle('none');
+const animationModal = (element='.main', otherElement='.modal') => {
+  $(element).toggle('none');
+  $(otherElement).toggle('none');
 };
 
 export { renderView, animationModal };

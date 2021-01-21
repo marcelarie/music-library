@@ -9,8 +9,6 @@
     margin: 0 auto;
 }
 
-.modal-type__content {
-}
 
 .modal-type-content__cover {
     display: flex;
@@ -38,10 +36,16 @@
 .modal-type__content {
     margin: 0 auto;
     width: 80vw;
+    display: flex;
+    justify-content: center;
 }
 .modal-type-content__info a{
     color: var(--orange);
-    font-weight: 600;
+    font-weight: 700;
+    font-size: larger;
+}
+.modal-type-content__info{
+    margin-top: 2em;
 }
 .modal-type-content__info a:hover{
     text-decoration: underline;
@@ -53,7 +57,7 @@
 .modal-type-content__info p {
     color: var(--blue);
     font-weight: 600;
-    font-size: 0.9em;
+    font-size: 1.2em;
     line-height: 1.7em;
 }
 .modal-type-content__info strong {
@@ -76,7 +80,8 @@
     border-bottom: 2px solid var(--black);
     color: var(--blue);
 }
-.modal-type-content__titles{
+.modal-type__buttons button:active{
+    border: 2px solid var(--blue);
 }
 
 .modal .starred {
@@ -100,8 +105,7 @@
     width: 100%;
     margin-bottom: 0.5em;
 }
-.modal-type__player audio {
-}
+
 .big-font {
     font-size: larger;
 }
