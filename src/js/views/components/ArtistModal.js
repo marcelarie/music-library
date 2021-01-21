@@ -10,14 +10,12 @@ const artist = ({
       <section class="modal-type-content__cover">
         <br>
           <img src="${artworkUrl100}" alt="${artistName}">
-        <br>
           <h2>${artistName}
     <span class="material-icons starred">
         star_border
     </span>
     </h2>
-        <br>
-      <section class="modal-type-content__info bigger-font">
+      <section class="modal-type-content__info big-font">
         <p>Musical genre: <strong>${primaryGenreName}</strong></p>
      <a class="smaller-font" href="${artistLinkUrl}" target="_blank">Song Link in iTunes</a>
       </section>

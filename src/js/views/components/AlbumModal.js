@@ -14,7 +14,6 @@ const collection = ({
   <section class="modal-type" data-modalType="song">
     <section class="modal-type__content">
       <section class="modal-type-content__cover">
-    <br>
           <img src="${artworkUrl100}" alt="${artistName}">
     <br>
           <h2>${collectionName}
@@ -23,8 +22,7 @@ const collection = ({
       </span>
     </h2>
           <h3>${artistName}</h3>
-    <section class="modal-type-content__info bigger-font">
-        <br>
+    <section class="modal-type-content__info ">
         <p>Track Count: <strong>${trackCount}</strong></p>
         <p>Musical genre: <strong>${primaryGenreName}</strong></p>
         <p>Release date: <strong>${date}</strong></p>
