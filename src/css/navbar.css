@@ -16,6 +16,9 @@ nav h1 {
     margin-right: 0.5em;
     cursor: pointer;
 }
+nav h1:active{
+    transform: scale(1.1);
+}
 nav input {
     align-self: center;
     all: unset;

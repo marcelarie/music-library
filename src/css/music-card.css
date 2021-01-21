@@ -44,6 +44,10 @@
     cursor: pointer;
 }
 
+.music-card-item h3:hover, .music-card-item h2:hover{
+    text-decoration: underline;
+}
+
 /* starred */
 .music-card-item section span {
     font-size: 1.5em;
@@ -55,4 +59,6 @@
 .starred {
     align-self: flex-end;
 }
-
+.starred:active{
+    transform: scale(1.1);
+}
