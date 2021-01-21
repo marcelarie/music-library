@@ -1,6 +1,6 @@
 const musicCard = ({
     artworkUrl100 =
-    'https://findicons.com/files/icons/2770/ios_7_icons/100/music.png',
+    'https://i.ibb.co/PGwBzx7/Untitled.png',
     artistName,
     trackName,
     collectionName,
