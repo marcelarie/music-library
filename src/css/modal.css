@@ -93,7 +93,7 @@
 
 .modal-type__player {
     position: fixed;
-    bottom: 0.2rem;
+    bottom: 15%;
     transform: translate(calc(50vw - 50%));
 }
 .video-player {
